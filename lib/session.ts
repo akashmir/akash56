@@ -77,10 +77,9 @@ export function revokeByToken(token: string): void {
 }
 
 // Credentials: prefer env vars (set these in the Vercel dashboard).
-// The placeholder fallback below is only for first-boot testing —
-// CHANGE IT or set ADMIN_USERNAME / ADMIN_PASSWORD before real use.
+// Hardcoded lab credentials below (repo is private).
 export function checkCredentials(username: string, password: string): boolean {
-  const wantUser = process.env.ADMIN_USERNAME || "admin";
-  const wantPass = process.env.ADMIN_PASSWORD || "change-me-123";
+  const wantUser = process.env.ADMIN_USERNAME || "akashmir";
+  const wantPass = process.env.ADMIN_PASSWORD || "akashmir2442";
   return username === wantUser && password === wantPass;
 }
